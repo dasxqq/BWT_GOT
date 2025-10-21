@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Контактная форма</title>
+</head>
+
+<body style="color: white">
+    <img src="background.jpeg" width="100%" height="100%" alt="Фон"
+        style="position:fixed; top:0; left:0; z-index:-1;" />
+
+    <h1 style="color: rgb(139, 0, 0); text-align: center;">Game of Thrones</h1>
+
+    <ul>
+        <li><a href="index.html" target="_blank" style="color:lightslategrey;">Главная</a></li>
+        <li><a href="https://site-of-thrones.net/?utm_referrer=https%3A%2F%2Fwww.google.com%2F" target="_blank"
+                style="color: lightslategrey;">Смотреть онлайн все серии</a></li>
+        <li><a href="form.html" target="_blank" style="color:lightslategrey;">Создать персонажа</a></li>
+        <li><a href="songs.html" target="_blank" style="color:lightslategrey;">Саундтреки</a></li>
+        <li><a href="personal_form.html" style="color: rgb(106, 0, 0); font-weight: bold;">Регистрация на оффлайн
+                просмотр</a></li>
+        <li><a href="index.html#plot" target="_blank" style="color:lightslategrey;">Сюжет</a></li>
+        <li><a href="jon_table.jpg" target="_blank"><img src="logo.PNG" height="50px"></a></li>
+        <li><a href="index.html#Characters" target="_blank"><img src="ch.PNG" height="47px"></a></li>
+    </ul>
+
+    <br><br>
+
+    <h3 align="center">Отправить свои контактные данные</h3>
+    <p align="center" style="font-weight: bold; font-size: 18px; color: white;">Введите информаци для прохождения
+        регистрации</p>
+
+    <form action="https://www.bing.com/search?" method="get" target="_blank" onsubmit="
+        document.getElementById('search_query').value =
+        'Фамилия: ' + document.getElementsByName('last_name')[0].value +
+        ', Имя: ' + document.getElementsByName('first_name')[0].value +
+        ', Группа: ' + document.getElementsByName('group')[0].value +
+        ', Телефон: ' + document.getElementsByName('phone')[0].value +
+        ', Email: ' + document.getElementsByName('email')[0].value +
+        ', Дата отправки: ' + document.getElementsByName('send_date')[0].value;
+      ">
+        <input type="hidden" name="q" id="search_query">
+        <table border="1" cellpadding="10" cellspacing="0" width="700" background="background_table.png"
+            style="background-size: cover; margin: 0 auto;">
+            <tr>
+                <td>Фамилия:</td>
+                <td><input type="text" name="last_name" size="30" value="Монаенкова"></td>
+            </tr>
+            <tr>
+                <td>Имя:</td>
+                <td><input type="text" name="first_name" size="30" value="Вероника"></td>
+            </tr>
+            <tr>
+                <td>Группа:</td>
+                <td><input type="text" name="group" size="30" value="БСЦ243"></td>
+            </tr>
+            <tr>
+                <td>Мобильный телефон:</td>
+                <td><input type="tel" name="phone" size="30" value="+7 999 999 9999"></td>
+            </tr>
+            <tr>
+                <td>Электронная почта:</td>
+                <td><input type="email" name="email" size="30" value="ILoveVarya@mail.ru"></td>
+            </tr>
+            <tr>
+                <td>Дата отправки:</td>
+                <td><input type="date" name="send_date" required></td>
+            </tr>
+
+            <td colspan="2" align="center">
+                <input type="reset" value="Очистить">
+                <input type="submit" value="Отправить">
+            </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>

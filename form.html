@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+
+<body style="color: white">
+    <img src="background.jpeg" width="100%" height="100%" alt="Фон"
+        style="position:fixed; top:0; left:0; z-index:-1;" />
+
+    <h1 style="color: rgb(139, 0, 0); text-align: center;">Game of Thrones</h1>
+
+    <ul>
+        <li><a href="index.html" target="_blank" style="color:lightslategrey;">Главная</a></li>
+        <li><a href="https://site-of-thrones.net/?utm_referrer=https%3A%2F%2Fwww.google.com%2F" target="_blank"
+                style="color: lightslategrey;">Смотреть онлайн все серии</a></li>
+        <li><a href="form.html" style="color: rgb(106, 0, 0); font-weight: bold;">Создать персонажа</a></li>
+        <li><a href="songs.html" target="_blank" style="color:lightslategrey;">Саундтреки</a></li>
+        <li><a href="personal_form.html" target="_blank" style="color:lightslategrey;">Регистрация на оффлайн
+                просмотр</a></li>
+        <li><a href="index.html#plot" target="_blank" style="color:lightslategrey;">Сюжет</a></li>
+        <li><a href="jon_table.jpg" target="_blank"><img src="logo.PNG" height="50px"></a></li>
+        <li><a href="index.html#Characters" target="_blank"><img src="ch.PNG" height="47px"></a></li>
+    </ul>
+
+    <br><br>
+
+
+
+    <h3 align="center">Создать своего персонажа</h3>
+    <p align="center" style="font-weight: bold; font-size: 18px; color: white;">Введите данные</p>
+
+    <form action="https://www.bing.com/search" method="get" target="_blank"
+      onsubmit="
+        document.getElementById('search_query').value =
+        'Фамилия и имя: ' + document.getElementsByName('last_name')[0].value +
+        ', Возраст: ' + document.getElementsByName('age')[0].value +
+        ', Титул(-ы): ' + document.getElementsByName('titles')[0].value +
+        ', Родина: ' + document.getElementsByName('motherland')[0].value +
+        ', Религия: ' + document.getElementsByName('religion')[0].value +
+        ', Актёр: ' + document.getElementsByName('actor')[0].value +
+        ', Дом: ' + document.querySelector('input[name=house]:checked').value +
+        ', Достижения: ' + Array.from(document.querySelectorAll('input[name=trophy]:checked')).map(cb => cb.nextSibling.textContent.trim()).join(', ') +
+        ', Дополнительно: ' + document.getElementsByName('textarea')[0].value +
+        ', Дата начала пути героя: ' + document.getElementsByName('user_date')[0].value +
+        ', Тип персонажа: ' + document.getElementsByName('010_mode')[0].value;
+      ">
+    <input type="hidden" name="q" id="search_query">
+        <table border="1" cellpadding="10" cellspacing="0" width="700" background="background_table.png"
+            style="background-size: cover; margin: 0 auto;">
+            <tr>
+                <td>Фамилия и имя:</td>
+                <td><input type="text" name="last_name" size="30" value="Джон Сноу"></td>
+            </tr>
+            <tr>
+                <td>Возраст:</td>
+                <td><input type="number" name="age" size="30" value="22"></td>
+            </tr>
+            <tr>
+                <td>Титул(-ы):</td>
+                <td><input type="text" name="titles" size="30" value="Король Севера (ранее)"></td>
+            </tr>
+            <tr>
+                <td>Родина:</td>
+                <td><input type="text" name="motherland" size="30" value="Башня Радости, Дорн, Вестерос"></td>
+            </tr>
+            <tr>
+                <td>Религия:</td>
+                <td><input type="text" name="religion" size="30" value="Старые боги"></td>
+            </tr>
+            <tr>
+                <td>Актёр:</td>
+                <td><input type="text" name="actor" size="30" value="Кит Харингтон"></td>
+            </tr>
+            <tr>
+                <td>Принадлежность к дому:</td>
+                <td>
+                    <input type="radio" name="house" value="Starks">Старки
+                    <input type="radio" name="house" value="Lannisters" checked>Ланнистеры
+                    <input type="radio" name="house" value="Baratheons">Баратеоны
+                    <input type="radio" name="house" value="Tirells" checked>Тиреллы
+                    <input type="radio" name="house" value="Arrens" checked>Аррены
+                    <input type="radio" name="house" value="others" checked>Другой
+                </td>
+            </tr>
+            <tr>
+                <td>Индивидуальные достижения:</td>
+                <td>
+                    <input type="checkbox" name="trophy" value="10" checked> Победитель Клиффов Драконов<br>
+                    <input type="checkbox" name="trophy" value="20"> Владелец Железного Трона<br>
+                    <input type="checkbox" name="trophy" value="30"> Мастер меча<br>
+                    <input type="checkbox" name="trophy" value="40"> Король на Севере<br>
+                    <input type="checkbox" name="trophy" value="50"> Хранитель Стены
+                </td>
+            </tr>
+            <tr>
+                <td>Дополнительная информация:</td>
+                <td>
+                    <textarea cols="50" rows="4" name="textarea">Другие данные о персонаже</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Дата начала пути героя:</td>
+                <td><input type="date" name="user_date" value="2003-08-20"></td>
+            </tr>
+            <tr>
+                <td>Тип персонажа:</td>
+                <td>
+                    <select name="010_mode">
+                        <option value="a">главный</option>
+                        <option value="w">второстепенный</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="reset" name="Reset" value="Обновить">
+                    <input type="submit" name="submit" value="Отправить">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <img src="jon_table.jpg" width="600" height="400" alt="Jon Snow">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" style="color: white;">
+                    Подробнее о персонаже:
+                    <a href="https://ru.wikipedia.org/wiki/Джон_Сноу" target="_blank"
+                        style="color: rgb(130, 132, 242);">Вики-страница</a>
+                </td>
+            </tr>
+        </table>
+
+        <input type="hidden" name="function" value="page">
+        <input type="hidden" name="page_id" value="3">
+    </form>
+
+
+</body>
+
+</html>
