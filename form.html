@@ -18,16 +18,13 @@
                 style="color: lightslategrey;">Смотреть онлайн все серии</a></li>
         <li><a href="form.html" style="color: rgb(106, 0, 0); font-weight: bold;">Создать персонажа</a></li>
         <li><a href="songs.html" target="_blank" style="color:lightslategrey;">Саундтреки</a></li>
-        <li><a href="personal_form.html" target="_blank" style="color:lightslategrey;">Регистрация на оффлайн
-                просмотр</a></li>
+        <li><a href="personal_form.html" target="_blank" style="color:lightslategrey;">Регистрация на оффлайн просмотр</a></li>
         <li><a href="index.html#plot" target="_blank" style="color:lightslategrey;">Сюжет</a></li>
         <li><a href="jon_table.JPG" target="_blank"><img src="logo.PNG" height="50px"></a></li>
         <li><a href="index.html#Characters" target="_blank"><img src="ch.PNG" height="47px"></a></li>
     </ul>
 
     <br><br>
-
-
 
     <h3 align="center">Создать своего персонажа</h3>
     <p align="center" style="font-weight: bold; font-size: 18px; color: white;">Введите данные</p>
@@ -45,9 +42,11 @@
         ', Достижения: ' + Array.from(document.querySelectorAll('input[name=trophy]:checked')).map(cb => cb.nextSibling.textContent.trim()).join(', ') +
         ', Дополнительно: ' + document.getElementsByName('textarea')[0].value +
         ', Дата начала пути героя: ' + document.getElementsByName('user_date')[0].value +
-        ', Тип персонажа: ' + document.getElementsByName('010_mode')[0].value;
+        ', Тип персонажа: ' + document.getElementsByName('010_mode')[0].value +
+        ', Пароль: ' + document.getElementsByName('password')[0].value;
       ">
-    <input type="hidden" name="q" id="search_query">
+        <input type="hidden" name="q" id="search_query">
+
         <table border="1" cellpadding="10" cellspacing="0" width="700" background="background_table.png"
             style="background-size: cover; margin: 0 auto;">
             <tr>
@@ -77,12 +76,12 @@
             <tr>
                 <td>Принадлежность к дому:</td>
                 <td>
-                    <input type="radio" name="house" value="Starks">Старки
-                    <input type="radio" name="house" value="Lannisters" checked>Ланнистеры
-                    <input type="radio" name="house" value="Baratheons">Баратеоны
-                    <input type="radio" name="house" value="Tirells" checked>Тиреллы
-                    <input type="radio" name="house" value="Arrens" checked>Аррены
-                    <input type="radio" name="house" value="others" checked>Другой
+                    <input type="radio" name="house" value="Starks" checked> Старки
+                    <input type="radio" name="house" value="Lannisters"> Ланнистеры
+                    <input type="radio" name="house" value="Baratheons"> Баратеоны
+                    <input type="radio" name="house" value="Tirells"> Тиреллы
+                    <input type="radio" name="house" value="Arrens"> Аррены
+                    <input type="radio" name="house" value="others"> Другой
                 </td>
             </tr>
             <tr>
@@ -103,7 +102,7 @@
             </tr>
             <tr>
                 <td>Дата начала пути героя:</td>
-                <td><input type="date" name="user_date" value="2003-08-20"></td>
+                <td><input type="date" name="user_date" value="2000-01-20"></td>
             </tr>
             <tr>
                 <td>Тип персонажа:</td>
@@ -113,6 +112,10 @@
                         <option value="w">второстепенный</option>
                     </select>
                 </td>
+            </tr>
+            <tr>
+                <td>Пароль:</td>
+                <td><input type="password" name="password" size="30" value="winteriscoming"></td>
             </tr>
             <tr>
                 <td colspan="2" align="center">
@@ -138,7 +141,6 @@
         <input type="hidden" name="page_id" value="3">
     </form>
 
-
 </body>
-
 </html>
+
